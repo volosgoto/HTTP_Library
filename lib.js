@@ -5,13 +5,14 @@ function easyHTTP() {
 // Make HTTP GET request
 easyHTTP.prototype.get = function (url) {
     this.http.open('GET', url, true);
-    if (this.http.status === 200) {
-        this.http.onload = function () {
-            
-        }
-    }
-
-    
+     
+    let self = this;
+    this.http.onload = function () {
+        if (self.http.status === 200) {
+            console.log(self.http.responseText);
+        }        
+    } 
+    this.http.send();
 }
 
 
