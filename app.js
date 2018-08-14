@@ -27,14 +27,33 @@ let http = new easyHTTP;
 
 // POST request
 // Set data
+// let data = {
+//     title: "Custom",
+//     body: "Custom quia "
+//   }; 
+//  // Create Post;
+//  let url = 'https://jsonplaceholder.typicode.com/posts';
+
+//  http.post(url, data, function (err, post) {
+//     if (err) {
+//         console.log(err);
+//     } else {
+//         console.log(post);
+//     }
+//  })
+
+
+// PUT request
 let data = {
     title: "Custom",
     body: "Custom quia "
   }; 
- // Create Post;
- let url = 'https://jsonplaceholder.typicode.com/posts';
+let postId = 2;  
 
- http.post(url, data, function (err, post) {
+ // UPD post;
+ let url = `https://jsonplaceholder.typicode.com/posts/${postId}`;
+
+ http.put(url, data, function (err, post) {
     if (err) {
         console.log(err);
     } else {
