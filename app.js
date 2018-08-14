@@ -1,5 +1,6 @@
 let http = new easyHTTP;
 
+// GET request
 // GET posts
 // let url = 'https://jsonplaceholder.typicode.com/posts';
 // http.get(url, function (err, posts) {
@@ -25,7 +26,6 @@ let http = new easyHTTP;
 
 
 // POST request
-
 // Set data
 let data = {
     title: "Custom",
