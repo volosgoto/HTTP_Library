@@ -44,19 +44,34 @@ let http = new easyHTTP;
 
 
 // PUT request
-let data = {
-    title: "Custom",
-    body: "Custom quia "
-  }; 
-let postId = 2;  
+// let data = {
+//     title: "Custom",
+//     body: "Custom quia "
+//   }; 
+// let postId = 2;  
 
- // UPD post;
- let url = `https://jsonplaceholder.typicode.com/posts/${postId}`;
+//  // UPD post;
+//  let url = `https://jsonplaceholder.typicode.com/posts/${postId}`;
 
- http.put(url, data, function (err, post) {
+//  http.put(url, data, function (err, post) {
+//     if (err) {
+//         console.log(err);
+//     } else {
+//         console.log(post);
+//     }
+//  })
+
+
+// DELETE request
+// Delete posts
+let postId = 100;  
+let url = `https://jsonplaceholder.typicode.com/posts/${postId}`;
+
+http.delete(url, function (err, response) {
     if (err) {
         console.log(err);
     } else {
-        console.log(post);
+    console.log(response);
     }
- })
+}); 
+// console.log(posts);
