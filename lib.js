@@ -3,6 +3,17 @@ function easyHTTP() {
 }
 
 // Make HTTP GET request
+easyHTTP.prototype.get = function (url) {
+    this.http.open('GET', url, true);
+    if (this.http.status === 200) {
+        this.http.onload = function () {
+            
+        }
+    }
+
+    
+}
+
 
 // Make HTTP POST request
 
