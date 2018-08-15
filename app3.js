@@ -6,10 +6,10 @@
 let http = new HTTP();
 
 // GET users 
-let url = 'https://jsonplaceholder.typicode.com/users';
-http.get(url) // method GET returns promise
-    .then(data => console.log(data))
-    .catch(err => console.log(err));
+// let url = 'https://jsonplaceholder.typicode.com/users';
+// http.get(url) // method GET returns promise
+//     .then(data => console.log(data))
+//     .catch(err => console.log(err));
 
 
 // Add user data
@@ -27,18 +27,18 @@ http.get(url) // method GET returns promise
 
 // Update User
 // Add user data
-// let data = {
-//     "name": "Name",
-//     "username": "Bt",
-//     "email": "test1@test.com",
-// }
+let data = {
+    "name": "Name",
+    "username": "Bt",
+    "email": "test1@test.com",
+}
 
-// let userId = 1;
-// let url = `https://jsonplaceholder.typicode.com/users/${userId}`;
+let userId = 1;
+let url = `https://jsonplaceholder.typicode.com/users/${userId}`;
 
-// http.put(url, data)
-//     .then(data => console.log(data))
-//     .catch(err => console.log(err));
+http.put(url, data)
+    .then(data => console.log(data))
+    .catch(err => console.log(err));
 
 
 // Delete User

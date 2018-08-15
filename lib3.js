@@ -12,18 +12,15 @@ class HTTP {
     };
 
     // Make HTTP POST request
-    post(url, data){
-       return new Promise((resolve, reject) => {
-           fetch(url, {
+    async post(url, data){
+        const response = await fetch (url, {
                method: 'POST',
                headers: { 'Content-type' : 'application/json' },
                body: JSON.stringify(data)
                }
-           )
-           .then(res => res.json())
-           .then(data => resolve(data))
-           .catch(err => reject(err))
-           });
+           );
+           const responseData = response.json();
+           return responseData;
     };
 
     // Make HTTP PUT request
