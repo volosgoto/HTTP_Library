@@ -1,6 +1,7 @@
 /**
  * Library for HTTP Requests
  * @version 3.0
+ * Uses async await
  */
 
 let http = new HTTP();
