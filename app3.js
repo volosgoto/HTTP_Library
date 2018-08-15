@@ -27,24 +27,24 @@ let http = new HTTP();
 
 // Update User
 // Add user data
-let data = {
-    "name": "Name",
-    "username": "Bt",
-    "email": "test1@test.com",
-}
+// let data = {
+//     "name": "Name",
+//     "username": "Bt",
+//     "email": "test1@test.com",
+// }
 
-let userId = 1;
-let url = `https://jsonplaceholder.typicode.com/users/${userId}`;
-
-http.put(url, data)
-    .then(data => console.log(data))
-    .catch(err => console.log(err));
-
-
-// Delete User
 // let userId = 1;
 // let url = `https://jsonplaceholder.typicode.com/users/${userId}`;
 
-// http.delete(url)
+// http.put(url, data)
 //     .then(data => console.log(data))
 //     .catch(err => console.log(err));
+
+
+// Delete User
+let userId = 1;
+let url = `https://jsonplaceholder.typicode.com/users/${userId}`;
+
+http.delete(url)
+    .then(data => console.log(data))
+    .catch(err => console.log(err));

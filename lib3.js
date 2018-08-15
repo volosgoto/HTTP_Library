@@ -18,7 +18,7 @@ class HTTP {
                headers: { 'Content-type' : 'application/json' },
                body: JSON.stringify(data)
                }
-           );
+            );
            const responseData = response.json();
            return responseData;
     };
@@ -30,22 +30,20 @@ class HTTP {
                headers: { 'Content-type' : 'application/json' },
                body: JSON.stringify(data)
                }
-           );
+            );
             const responseData = response.json();
             return responseData;
     };
 
     // Make HTTP DELETE request
-    delete(url){
-       return new Promise((resolve, reject) => {
-           fetch(url, {
+    async delete(url){
+        const response = await fetch(url, {
                method: 'DELETE',
                headers: { 'Content-type' : 'application/json' },
                }
-           )
-           .then(res => res.json())
-           .then(() => resolve('Resorse deleted'))
-           .catch(err => reject(err))
-           });
+            );
+            const responseData = 'Resorse deleted...';
+            return responseData;
+    
     };
 }
