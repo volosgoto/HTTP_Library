@@ -1,1 +1,1 @@
-# HTTP_Library_Ajax
+# Library for making HTTP requests
