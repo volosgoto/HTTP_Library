@@ -24,18 +24,15 @@ class HTTP {
     };
 
     // Make HTTP PUT request
-    put(url, data){
-       return new Promise((resolve, reject) => {
-           fetch(url, {
+    async put(url, data){
+        const response = await fetch (url, {
                method: 'PUT',
                headers: { 'Content-type' : 'application/json' },
                body: JSON.stringify(data)
                }
-           )
-           .then(res => res.json())
-           .then(data => resolve(data))
-           .catch(err => reject(err))
-           });
+           );
+            const responseData = response.json();
+            return responseData;
     };
 
     // Make HTTP DELETE request
