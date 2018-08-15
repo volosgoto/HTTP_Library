@@ -53,7 +53,7 @@
                 }
             )
             .then(res => res.json())
-            .then(data => resolve('Resorse deleted'))
+            .then(() => resolve('Resorse deleted'))
             .catch(err => reject(err))
             });
      };
